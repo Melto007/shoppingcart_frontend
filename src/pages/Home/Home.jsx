@@ -7,11 +7,10 @@ import {
 } from '@nextui-org/react'
 import Container from "../../components/Container"
 import { NavLink } from 'react-router-dom'
-import { topNav } from './navlinksArray'
 import Icons from '../../components/Icons'
-import BadgeComponent from '../../components/BadgeComponent'
 import ImageComponent from '../../components/ImageComponent'
 import logo from '../../../public/logo.png'
+import AvatarComponent from '../../components/AvatarComponent'
 
 function Home() {
     return (
@@ -35,17 +34,29 @@ function Home() {
                     </NavbarContent>
 
                     <NavbarContent justify="end">
-                        {topNav.map((item, idx) => (
-                            <NavbarItem key={idx}>
-                                <BadgeComponent
-                                    color={item.color}
-                                >
-                                    <NavLink to={item.path}>
-                                        <Icons name={item.name} />
-                                    </NavLink>
-                                </BadgeComponent>
-                            </NavbarItem>
-                        ))}
+                        <NavbarItem>
+                            <NavLink to='/'>
+                                <Icons name="search" />
+                            </NavLink>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <Badge
+                                content="5"
+                                color="danger"
+                                className="p-[0.4em] text-[0.8rem]"
+                            >
+                                <NavLink to='/'>
+                                    <Icons name="cart" />
+                                </NavLink>
+                            </Badge>
+                        </NavbarItem>
+                        <NavbarItem>
+                            <NavLink to='/'>
+                                <AvatarComponent
+                                    className="w-8 h-8"
+                                />
+                            </NavLink>
+                        </NavbarItem>
                     </NavbarContent>
                 </Navbar>
             </Container>

@@ -19,7 +19,9 @@ export default {
         "purplelight": "#d8b4fe",
         "vilotlight": "#c4b5fd",
         "indigolight": "#a5b4fc",
-        "bluelight": "#93c5fd"
+        "bluelight": "#93c5fd",
+        "slate": "#0f172a",
+        "zinc": "#fafafa",
       }
     },
   },

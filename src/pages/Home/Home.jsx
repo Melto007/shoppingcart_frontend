@@ -10,18 +10,20 @@ import { NavLink } from 'react-router-dom'
 import { topNav } from './navlinksArray'
 import Icons from '../../components/Icons'
 import BadgeComponent from '../../components/BadgeComponent'
-import Heading from '../../components/Heading'
+import ImageComponent from '../../components/ImageComponent'
+import logo from '../../../public/logo.png'
 
 function Home() {
     return (
         <>
             <Container>
-                <Navbar maxWidth="full" className="h-[3em]">
+                <Navbar maxWidth="full" className="bg-zinc text-slate">
                     <NavbarContent justify="start">
                         <NavbarBrand>
-                            <Heading
-                                content="shopping cart"
-                                className="font-bold text-[1.2rem]"
+                            <ImageComponent
+                                name="shopping-logo"
+                                src={logo}
+                                className="w-[4.5em]"
                             />
                         </NavbarBrand>
                     </NavbarContent>

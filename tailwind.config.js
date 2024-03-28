@@ -15,6 +15,7 @@ export default {
       colors: {
         'pinklight': "#f9a8d4",
         'roselight': "#fda4af",
+        "rosedark": "#f43f5e",
         "fuchsialight": "#f0abfc",
         "purplelight": "#d8b4fe",
         "vilotlight": "#c4b5fd",

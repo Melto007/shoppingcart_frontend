@@ -1,22 +1,28 @@
-import { FaSearch, FaShoppingCart } from "react-icons/fa"
-import { CiViewList } from "react-icons/ci";
+import { FaSearch, FaUser } from "react-icons/fa"
+import { MdCancel } from "react-icons/md"
+import { FaBagShopping } from "react-icons/fa6"
 
 function Icons({ name }) {
     const icon = [
         {
             id: 1,
             name: 'search',
-            icon: <FaSearch className="text-[1rem] cursor-pointer" />
+            icon: <FaSearch className="text-[1.2rem] cursor-pointer" />
         },
         {
             id: 2,
             name: 'cart',
-            icon: <FaShoppingCart className="text-[1rem] cursor-pointer" />
+            icon: <FaBagShopping className="text-[1.2rem] cursor-pointer sm:text-[1.5rem]" />
         },
         {
-            id: 3,
-            name: 'wishlist',
-            icon: <CiViewList className="text-[1rem] cursor-pointer" />
+            id: 4,
+            name: 'user',
+            icon: <FaUser className="text-[1rem] cursor-pointer" />
+        },
+        {
+            id: 5,
+            name: 'cancel',
+            icon: <MdCancel />
         }
     ]
     return (

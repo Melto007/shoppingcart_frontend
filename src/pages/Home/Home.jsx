@@ -3,7 +3,8 @@ import {
     NavbarBrand,
     NavbarContent,
     NavbarItem,
-    Badge
+    Badge,
+    Input
 } from '@nextui-org/react'
 import Container from "../../components/Container"
 import { NavLink } from 'react-router-dom'
@@ -11,13 +12,19 @@ import Icons from '../../components/Icons'
 import ImageComponent from '../../components/ImageComponent'
 import logo from '../../../public/logo.png'
 import AvatarComponent from '../../components/AvatarComponent'
+import ButtonComponent from '../../components/ButtonComponent'
 
 function Home() {
+
+    function handleSearch() {
+        console.log('click')
+    }
+
     return (
         <>
             <Container>
-                <Navbar maxWidth="full" className="bg-zinc text-slate">
-                    <NavbarContent justify="start">
+                <Navbar isBordered maxWidth="full" className="bg-zinc text-slate">
+                    <NavbarContent>
                         <NavbarBrand>
                             <ImageComponent
                                 name="shopping-logo"
@@ -27,14 +34,27 @@ function Home() {
                         </NavbarBrand>
                     </NavbarContent>
 
-                    <NavbarContent justify="start" className="hidden">
-                        <NavbarItem className="w-full">
-                            <input type="text" className="w-full" />
+                    <NavbarContent justify="center" className="hidden w-[50%] sm:flex">
+                        <NavbarItem className="w-full flex">
+                            <Input
+                                isClearable
+                                radius="none"
+                                placeholder="Type to search..."
+                                startContent={<Icons name="search" className="text-lime bg-transparent" />}
+                                endContent={<Icons name="cancel" />}
+                            />
+                            <ButtonComponent
+                                content="Search"
+                                size="md"
+                                radius="none"
+                                className="font-bold bg-rosedark"
+                                onClick={handleSearch}
+                            />
                         </NavbarItem>
                     </NavbarContent>
 
                     <NavbarContent justify="end">
-                        <NavbarItem>
+                        <NavbarItem className="sm:hidden">
                             <NavLink to='/'>
                                 <Icons name="search" />
                             </NavLink>

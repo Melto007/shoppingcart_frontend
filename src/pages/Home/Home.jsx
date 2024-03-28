@@ -1,6 +1,5 @@
 import {
     useState,
-    useEffect
 } from 'react'
 import {
     Navbar,
@@ -12,8 +11,6 @@ import {
     NavbarMenu,
     NavbarMenuItem,
     NavbarMenuToggle,
-    Tabs,
-    Tab
 } from '@nextui-org/react'
 import Container from "../../components/Container"
 import { NavLink } from 'react-router-dom'
@@ -22,6 +19,7 @@ import ImageComponent from '../../components/ImageComponent'
 import logo from '../../../public/logo.png'
 import AvatarComponent from '../../components/AvatarComponent'
 import ButtonComponent from '../../components/ButtonComponent'
+import NavLinks from '../../components/NavLinks'
 
 function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -37,7 +35,7 @@ function Home() {
         "Team Settings",
         "Help & Feedback",
         "Log Out",
-      ];
+    ]
 
     return (
         <>
@@ -120,12 +118,8 @@ function Home() {
                 </Navbar>
 
                 <Navbar onMenuOpenChange={setIsMenuOpen} isBordered maxWidth="full" className='hidden h-10 sm:flex'>
-                    <NavbarContent className='hidden sm:flex' justify='start'>
-                        <Tabs variant="underlined" aria-label="Tabs variants">
-                            <Tab key="photos" title="Photos" />
-                            <Tab key="music" title="Music"/>
-                            <Tab key="videos" title="Videos"/>
-                        </Tabs>
+                    <NavbarContent className='hidden sm:flex px-3' justify='start'>
+                        <NavLinks />
                     </NavbarContent>
                 </Navbar>
             </Container>

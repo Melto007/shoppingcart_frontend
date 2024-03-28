@@ -23,7 +23,7 @@ import NavLinks from '../../components/NavLinks'
 
 import { links } from '../../utils/links'
 
-function Home() {
+function MenuBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
     const location = useLocation()
@@ -82,12 +82,11 @@ function Home() {
                                 </NavLink>
                             </Badge>
                         </NavbarItem>
-                        <NavbarItem>
-                            <NavLink to='/'>
-                                <AvatarComponent
-                                    className="w-8 h-8 md:w-10 md:h-10"
-                                />
-                            </NavLink>
+                        <NavbarItem className='relative'>
+                            <AvatarComponent
+                                as="button"
+                                className="transition-transform"
+                            />
                         </NavbarItem>
                     </NavbarContent>
 
@@ -117,4 +116,4 @@ function Home() {
     )
 }
 
-export default Home
+export default MenuBar

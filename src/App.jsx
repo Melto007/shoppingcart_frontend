@@ -2,7 +2,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { NextUIProvider } from '@nextui-org/react'
 import store from './store/store'
-import Home from './pages/Home/Home'
+import Home from './pages/Home/MenuBar'
 import About from './pages/Home/About'
 
 function App() {

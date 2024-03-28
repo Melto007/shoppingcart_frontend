@@ -1,10 +1,10 @@
 import { Outlet } from "react-router-dom"
-import Home from "./Home/Home"
+import MenuBar from "./Home/MenuBar"
 
 function RootPage() {
     return (
         <>
-            <Home />
+            <MenuBar />
             <Outlet />
         </>
     )

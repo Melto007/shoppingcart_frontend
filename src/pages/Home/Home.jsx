@@ -13,7 +13,7 @@ import {
     NavbarMenuToggle,
 } from '@nextui-org/react'
 import Container from "../../components/Container"
-import { NavLink } from 'react-router-dom'
+import { NavLink, useLocation } from 'react-router-dom'
 import Icons from '../../components/Icons'
 import ImageComponent from '../../components/ImageComponent'
 import logo from '../../../public/logo.png'
@@ -21,21 +21,13 @@ import AvatarComponent from '../../components/AvatarComponent'
 import ButtonComponent from '../../components/ButtonComponent'
 import NavLinks from '../../components/NavLinks'
 
+import { links } from '../../utils/links'
+
 function Home() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-    const menuItems = [
-        "Profile",
-        "Dashboard",
-        "Activity",
-        "Analytics",
-        "System",
-        "Deployments",
-        "My Settings",
-        "Team Settings",
-        "Help & Feedback",
-        "Log Out",
-    ]
+    const location = useLocation()
+    const pathname = location.pathname
 
     return (
         <>
@@ -100,17 +92,15 @@ function Home() {
                     </NavbarContent>
 
                     <NavbarMenu className='z-1'>
-                        {menuItems.map((item, index) => (
+                        {links.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`}>
                                 <NavLink
-                                color={
-                                    index === 2 ? "primary" : index === menuItems.length - 1 ? "danger" : "foreground"
-                                }
-                                className="w-full"
-                                href="#"
-                                size="lg"
+                                    className={`${pathname === item.path ? "w-full text-rosedark" : "w-full"}`}
+                                    to={item.path}
+                                    size="lg"
+                                    onClick={() => setIsMenuOpen(!isMenuOpen)}
                                 >
-                                {item}
+                                    <span>{item.name}</span>
                                 </NavLink>
                             </NavbarMenuItem>
                         ))}

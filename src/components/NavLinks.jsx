@@ -8,28 +8,19 @@ import {
 import {
     motion
 } from 'framer-motion'
+import {
+    links
+} from '../utils/links'
 
 function NavLinks() {
 
     const location = useLocation()
     const pathname = location.pathname
 
-    const links = [
-        {
-            id: 1,
-            name: 'Home',
-            path: '/'
-        },
-        {
-            id: 2,
-            name: 'About',
-            path: '/about'
-        }
-    ]
     return (
         <>
             {links.map((item, idx) => (
-                <NavbarItem className='flex gap-6' key={idx}>
+                <NavbarItem className="pr-2" key={idx}>
                     <NavLink
                         to={item.path}
                         className={`${pathname === item.path ? "font-bold text-rosedark" : "font-bold"}`}
@@ -44,9 +35,10 @@ function NavLinks() {
                                         borderRadius: 9999,
                                     }}
                                     className='bg-rosedark w-full h-1 rounded-xl bottom-0 absolute'
+                                    transition={{ duration: 0.6, type: "spring" }}
                                 />
                             )}
-                            <span>{item.name}</span>
+                            <span className='relative'>{item.name}</span>
                         </div>
                     </NavLink>
                 </NavbarItem>

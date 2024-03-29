@@ -100,7 +100,7 @@ function Topproducts() {
                     className='flex flex-row p-0 gap-2'
                 >
                     {cardContainer.map((item, idx) => (
-                        <SwiperSlide>
+                        <SwiperSlide key={idx}>
                             <Card shadow="md" isPressable className='mb-4'>
                                 <CardHeader>
                                     <ImageComponent
@@ -130,14 +130,14 @@ function Topproducts() {
                                             content="Shop now"
                                             size="sm"
                                             color="danger"
-                                            className="text-[0.7rem] bg-slate rounded-none w-full font-bold"
+                                            className="text-[0.7rem] bg-slate rounded-none font-bold"
                                         />
                                         <ButtonComponent
                                             content="Add cart"
                                             size="sm"
                                             variant="bordered"
                                             color="danger"
-                                            className="text-[0.7rem] rounded-none w-full font-bold"
+                                            className="text-[0.7rem] rounded-none font-bold"
                                         />
                                     </div>
                                 </CardFooter>

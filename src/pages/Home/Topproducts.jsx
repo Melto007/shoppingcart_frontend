@@ -62,7 +62,7 @@ function Topproducts() {
 
     return (
         <>
-            <div className='px-2 mt-8 max-w-7xl mx-auto'>
+            <div className='px-2 max-w-7xl mx-auto'>
                 <Swiper
                     ref={sliderRef}
                     modules={[FreeMode, Virtual, Navigation, Pagination]}
@@ -82,13 +82,13 @@ function Topproducts() {
                             <CardBody className='text-center p-0'>
                                 <HeadingComponent
                                     content="Samsung 1029"
-                                    className="xxs:text-lg"
+                                    className="xxs:text-md md:text-lg"
                                 />
                             </CardBody>
                             <CardFooter className='flex flex-col'>
-                                <div className='flex justify-between items-center gap-2 mb-4'>
-                                    <span className='text-[0.8rem] xxs:text-lg'>$160000</span>
-                                    <span className='flex text-[0.8rem] xxs:text-lg'>
+                                <div className='flex justify-between items-center gap-2 mb-4 md:gap-4'>
+                                    <span className='text-[0.8rem] text-rosedark font-bold xxs:text-md md:text-lg'>$160000</span>
+                                    <span className='flex text-[0.8rem] xxs:text-md md:text-lg'>
                                         <Icons name="star" />
                                         <Icons name="star" />
                                         <Icons name="star" />
@@ -101,14 +101,14 @@ function Topproducts() {
                                         content="Shop now"
                                         size="sm"
                                         color="danger"
-                                        className="text-[0.7rem] bg-slate rounded-none w-full"
+                                        className="text-[0.7rem] bg-slate rounded-none w-full font-bold"
                                     />
                                     <ButtonComponent
                                         content="Add cart"
                                         size="sm"
                                         variant="bordered"
                                         color="danger"
-                                        className="text-[0.7rem] rounded-none w-full"
+                                        className="text-[0.7rem] rounded-none w-full font-bold"
                                     />
                                 </div>
                             </CardFooter>
@@ -125,12 +125,13 @@ function Topproducts() {
                             <CardBody className='text-center p-0'>
                                 <HeadingComponent
                                     content="Samsung 1029"
+                                    className="xxs:text-md md:text-lg"
                                 />
                             </CardBody>
                             <CardFooter className='flex flex-col'>
-                                <div className='flex justify-between items-center gap-2 mb-4'>
-                                    <span className='text-[0.8rem]'>$160000</span>
-                                    <span className='flex text-[0.8rem]'>
+                                <div className='flex justify-between items-center gap-2 mb-4 md:gap-4'>
+                                    <span className='text-[0.8rem] text-rosedark font-bold xxs:text-md md:text-lg'>$160000</span>
+                                    <span className='flex text-[0.8rem] xxs:text-md md:text-lg'>
                                         <Icons name="star" />
                                         <Icons name="star" />
                                         <Icons name="star" />
@@ -143,14 +144,14 @@ function Topproducts() {
                                         content="Shop now"
                                         size="sm"
                                         color="danger"
-                                        className="text-[0.7rem] bg-slate rounded-none w-full"
+                                        className="text-[0.7rem] bg-slate rounded-none w-full font-bold"
                                     />
                                     <ButtonComponent
                                         content="Add cart"
                                         size="sm"
                                         variant="bordered"
                                         color="danger"
-                                        className="text-[0.7rem] rounded-none w-full"
+                                        className="text-[0.7rem] rounded-none w-full font-bold"
                                     />
                                 </div>
                             </CardFooter>
@@ -167,12 +168,13 @@ function Topproducts() {
                             <CardBody className='text-center p-0'>
                                 <HeadingComponent
                                     content="Samsung 1029"
+                                    className="xxs:text-md md:text-lg"
                                 />
                             </CardBody>
                             <CardFooter className='flex flex-col'>
-                                <div className='flex justify-between items-center gap-2 mb-4'>
-                                    <span className='text-[0.8rem]'>$160000</span>
-                                    <span className='flex text-[0.8rem]'>
+                                <div className='flex justify-between items-center gap-2 mb-4 md:gap-4'>
+                                    <span className='text-[0.8rem] text-rosedark font-bold xxs:text-md md:text-lg'>$160000</span>
+                                    <span className='flex text-[0.8rem] xxs:text-md md:text-lg'>
                                         <Icons name="star" />
                                         <Icons name="star" />
                                         <Icons name="star" />
@@ -185,14 +187,14 @@ function Topproducts() {
                                         content="Shop now"
                                         size="sm"
                                         color="danger"
-                                        className="text-[0.7rem] bg-slate rounded-none w-full"
+                                        className="text-[0.7rem] bg-slate rounded-none w-full font-bold"
                                     />
                                     <ButtonComponent
                                         content="Add cart"
                                         size="sm"
                                         variant="bordered"
                                         color="danger"
-                                        className="text-[0.7rem] rounded-none w-full"
+                                        className="text-[0.7rem] rounded-none w-full font-bold"
                                     />
                                 </div>
                             </CardFooter>
@@ -209,12 +211,13 @@ function Topproducts() {
                             <CardBody className='text-center p-0'>
                                 <HeadingComponent
                                     content="Samsung 1029"
+                                    className="xxs:text-md md:text-lg"
                                 />
                             </CardBody>
                             <CardFooter className='flex flex-col'>
-                                <div className='flex justify-between items-center gap-2 mb-4'>
-                                    <span className='text-[0.8rem]'>$160000</span>
-                                    <span className='flex text-[0.8rem]'>
+                                <div className='flex justify-between items-center gap-2 mb-4 md:gap-4'>
+                                    <span className='text-[0.8rem] text-rosedark font-bold xxs:text-md md:text-lg'>$160000</span>
+                                    <span className='flex text-[0.8rem] xxs:text-md md:text-lg'>
                                         <Icons name="star" />
                                         <Icons name="star" />
                                         <Icons name="star" />
@@ -227,14 +230,14 @@ function Topproducts() {
                                         content="Shop now"
                                         size="sm"
                                         color="danger"
-                                        className="text-[0.7rem] bg-slate rounded-none w-full"
+                                        className="text-[0.7rem] bg-slate rounded-none w-full font-bold"
                                     />
                                     <ButtonComponent
                                         content="Add cart"
                                         size="sm"
                                         variant="bordered"
                                         color="danger"
-                                        className="text-[0.7rem] rounded-none w-full"
+                                        className="text-[0.7rem] rounded-none w-full font-bold"
                                     />
                                 </div>
                             </CardFooter>
@@ -251,12 +254,13 @@ function Topproducts() {
                             <CardBody className='text-center p-0'>
                                 <HeadingComponent
                                     content="Samsung 1029"
+                                    className="xxs:text-md md:text-lg"
                                 />
                             </CardBody>
                             <CardFooter className='flex flex-col'>
-                                <div className='flex justify-between items-center gap-2 mb-4'>
-                                    <span className='text-[0.8rem]'>$160000</span>
-                                    <span className='flex text-[0.8rem]'>
+                                <div className='flex justify-between items-center gap-2 mb-4 md:gap-4'>
+                                    <span className='text-[0.8rem] text-rosedark font-bold xxs:text-md md:text-lg'>$160000</span>
+                                    <span className='flex text-[0.8rem] xxs:text-md md:text-lg'>
                                         <Icons name="star" />
                                         <Icons name="star" />
                                         <Icons name="star" />
@@ -269,14 +273,14 @@ function Topproducts() {
                                         content="Shop now"
                                         size="sm"
                                         color="danger"
-                                        className="text-[0.7rem] bg-slate rounded-none w-full"
+                                        className="text-[0.7rem] bg-slate rounded-none w-full font-bold"
                                     />
                                     <ButtonComponent
                                         content="Add cart"
                                         size="sm"
                                         variant="bordered"
                                         color="danger"
-                                        className="text-[0.7rem] rounded-none w-full"
+                                        className="text-[0.7rem] rounded-none w-full font-bold"
                                     />
                                 </div>
                             </CardFooter>

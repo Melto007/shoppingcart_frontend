@@ -23,6 +23,7 @@ import NavLinks from '../../components/NavLinks'
 
 import { links } from '../../utils/links'
 import Header from './Header'
+import Topproducts from './Topproducts'
 
 function MenuBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -116,6 +117,7 @@ function MenuBar() {
 
             <Container>
                     <Header />
+                    <Topproducts />
             </Container>
         </>
     )

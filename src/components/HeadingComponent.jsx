@@ -1,4 +1,4 @@
-function Heading(props) {
+function HeadingComponent(props) {
     const { content} = props
 
     return (
@@ -10,4 +10,4 @@ function Heading(props) {
     )
 }
 
-export default Heading
+export default HeadingComponent

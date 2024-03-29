@@ -10,7 +10,8 @@ export default {
   theme: {
     extend: {
       screens: {
-        'xxs': '340px'
+        'xxs': '340px',
+        'xmd': '560px',
       },
       colors: {
         'pinklight': "#f9a8d4",

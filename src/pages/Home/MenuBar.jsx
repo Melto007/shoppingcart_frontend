@@ -22,6 +22,7 @@ import ButtonComponent from '../../components/ButtonComponent'
 import NavLinks from '../../components/NavLinks'
 
 import { links } from '../../utils/links'
+import Header from './Header'
 
 function MenuBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -90,7 +91,7 @@ function MenuBar() {
                         </NavbarItem>
                     </NavbarContent>
 
-                    <NavbarMenu className='z-1'>
+                    <NavbarMenu className='z-10 bg-zinc'>
                         {links.map((item, index) => (
                             <NavbarMenuItem key={`${item}-${index}`}>
                                 <NavLink
@@ -111,6 +112,10 @@ function MenuBar() {
                         <NavLinks />
                     </NavbarContent>
                 </Navbar>
+            </Container>
+
+            <Container>
+                    <Header />
             </Container>
         </>
     )

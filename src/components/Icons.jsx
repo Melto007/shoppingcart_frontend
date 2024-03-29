@@ -2,6 +2,7 @@ import { FaSearch, FaUser } from "react-icons/fa"
 import { MdCancel } from "react-icons/md"
 import { FaBagShopping } from "react-icons/fa6"
 import { CiStar } from "react-icons/ci"
+import { MdNavigateNext, MdNavigateBefore } from "react-icons/md"
 
 function Icons(props) {
     const { name } = props
@@ -30,6 +31,16 @@ function Icons(props) {
             id: 6,
             name: 'star',
             icon: <CiStar />
+        },
+        {
+            id: 7,
+            name: 'next',
+            icon: <MdNavigateNext />
+        },
+        {
+            id: 8,
+            name: 'back',
+            icon: <MdNavigateBefore />
         }
     ]
     return (

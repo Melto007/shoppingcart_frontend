@@ -1,8 +1,10 @@
 import { FaSearch, FaUser } from "react-icons/fa"
 import { MdCancel } from "react-icons/md"
 import { FaBagShopping } from "react-icons/fa6"
+import { CiStar } from "react-icons/ci"
 
-function Icons({ name }) {
+function Icons(props) {
+    const { name } = props
     const icon = [
         {
             id: 1,
@@ -23,6 +25,11 @@ function Icons({ name }) {
             id: 5,
             name: 'cancel',
             icon: <MdCancel />
+        },
+        {
+            id: 6,
+            name: 'star',
+            icon: <CiStar />
         }
     ]
     return (

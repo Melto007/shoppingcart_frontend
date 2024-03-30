@@ -22,7 +22,7 @@ import ButtonComponent from '../../components/ButtonComponent'
 
 import { cardContainer } from './ProductContainer'
 
-function Topproducts() {
+function Newproducts() {
     const sliderRef = useRef()
     const [slidesPerView, setSlidesPerView] = useState(1)
 
@@ -70,7 +70,7 @@ function Topproducts() {
         <>
             <div className='px-2 max-w-7xl mx-auto mt-12 mb-5 flex justify-between items-center'>
                 <HeadingComponent
-                    content="TOP SELLINGS"
+                    content="NEW PRODUCTS"
                     className="font-bold text-lg xxs:text-xl md:text-2xl"
                 />
                 <div className='flex gap-2'>
@@ -155,4 +155,4 @@ function Topproducts() {
     )
 }
 
-export default Topproducts
+export default Newproducts

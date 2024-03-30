@@ -27,6 +27,7 @@ import { links } from '../../utils/links'
 import Header from './Header'
 import Topproducts from './Topproducts'
 import TopDiscount from './TopDiscount'
+import Newproducts from './Newproducts'
 
 function MenuBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -120,9 +121,10 @@ function MenuBar() {
 
             <Container>
                     <Header />
-                    <Topproducts />
+                    <Newproducts />
                     <Discount />
                     <TopDiscount />
+                    <Topproducts />
             </Container>
         </>
     )

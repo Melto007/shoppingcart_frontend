@@ -21,6 +21,8 @@ import AvatarComponent from '../../components/AvatarComponent'
 import ButtonComponent from '../../components/ButtonComponent'
 import NavLinks from '../../components/NavLinks'
 
+import Discount from './Discount'
+
 import { links } from '../../utils/links'
 import Header from './Header'
 import Topproducts from './Topproducts'
@@ -118,6 +120,7 @@ function MenuBar() {
             <Container>
                     <Header />
                     <Topproducts />
+                    <Discount />
             </Container>
         </>
     )

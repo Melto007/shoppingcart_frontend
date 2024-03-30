@@ -27,7 +27,11 @@ function Topproducts() {
     const [slidesPerView, setSlidesPerView] = useState(1)
 
     const updateSlidesPerView = () => {
-        if(window.innerWidth <= 500) {
+        if(window.innerWidth <= 340) {
+            setSlidesPerView(1)
+        }
+
+        if(window.innerWidth >= 340 && window.innerWidth <= 500) {
             setSlidesPerView(2)
         }
 
@@ -66,7 +70,7 @@ function Topproducts() {
         <>
             <div className='px-2 max-w-7xl mx-auto mt-12 mb-5 flex justify-between items-center'>
                 <HeadingComponent
-                    content="TOP SELLING"
+                    content="NEW PRODUCTS"
                     className="font-bold text-lg xxs:text-xl md:text-2xl"
                 />
                 <div className='flex gap-2'>
@@ -86,6 +90,7 @@ function Topproducts() {
                     />
                 </div>
             </div>
+
             <div className='px-2 max-w-7xl mx-auto'>
                 <Swiper
                     ref={sliderRef}
@@ -100,8 +105,8 @@ function Topproducts() {
                     className='flex flex-row p-0 gap-2'
                 >
                     {cardContainer.map((item, idx) => (
-                        <SwiperSlide key={idx}>
-                            <Card shadow="md" isPressable className='mb-4'>
+                        <SwiperSlide key={idx} className="!mx-3">
+                            <Card shadow="md" isPressable className='mb-4 w-full'>
                                 <CardHeader>
                                     <ImageComponent
                                         src={item.image}

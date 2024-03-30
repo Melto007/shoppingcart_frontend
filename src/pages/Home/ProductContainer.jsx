@@ -112,3 +112,54 @@ export const cardContainer = [
         image: product09
     }
 ]
+
+export const discountContainer = [
+    {
+        id: 1,
+        name: 'Samsung',
+        price: '$80,000',
+        image: product01
+    },
+    {
+        id: 2,
+        name: 'Headphone',
+        price: '$8,000',
+        image: product02
+    },
+    {
+        id: 3,
+        name: 'Dell',
+        price: '$1,10,000',
+        image: product03
+    },
+    {
+        id: 4,
+        name: 'Sony',
+        price: '$50,000',
+        image: product04
+    },
+    {
+        id: 5,
+        name: 'Headphone',
+        price: '$2,000',
+        image: product05
+    },
+    {
+        id: 6,
+        name: 'Lenovo',
+        price: '$40,000',
+        image: product06
+    },
+    {
+        id: 7,
+        name: 'Samsung',
+        price: '$80,000',
+        image: product07
+    },
+    {
+        id: 8,
+        name: 'Asus',
+        price: '$90,000',
+        image: product08
+    }
+]

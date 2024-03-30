@@ -35,3 +35,27 @@ export const links = [
         path: '/accessories'
     }
 ]
+
+
+export const tablinks = [
+    {
+        id: 1,
+        name: 'Laptop',
+        path: 'laptop'
+    },
+    {
+        id: 2,
+        name: 'Smartphones',
+        path: 'smartphone'
+    },
+    {
+        id: 3,
+        name: 'Camera',
+        path: 'camera'
+    },
+    {
+        id: 4,
+        name: 'Accessories',
+        path: 'accessories'
+    }
+]

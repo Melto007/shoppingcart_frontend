@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react'
+import { useState, useRef } from 'react'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -21,75 +21,19 @@ import Icons from '../../components/Icons'
 import ButtonComponent from '../../components/ButtonComponent'
 
 import { cardContainer } from './ProductContainer'
+import CardHeaderComponent from '../../components/CardHeaderComponent'
 
 function Topproducts() {
     const sliderRef = useRef()
     const [slidesPerView, setSlidesPerView] = useState(1)
 
-    const updateSlidesPerView = () => {
-        if(window.innerWidth <= 340) {
-            setSlidesPerView(1)
-        }
-
-        if(window.innerWidth >= 340 && window.innerWidth <= 500) {
-            setSlidesPerView(2)
-        }
-
-        if (window.innerWidth >= 620) {
-            setSlidesPerView(3)
-        }
-
-        if (window.innerWidth >= 820) {
-            setSlidesPerView(4)
-        }
-    }
-
-    useEffect(() => {
-        updateSlidesPerView()
-        window.addEventListener('resize', updateSlidesPerView)
-
-        return () => {
-            window.removeEventListener('resize', updateSlidesPerView)
-        }
-    }, [])
-
-    function handlePrev() {
-        if(sliderRef.current && sliderRef.current.swiper) {
-            sliderRef.current.swiper.slidePrev()
-        }
-    }
-
-    function handleNext() {
-        if(sliderRef.current && sliderRef.current.swiper) {
-            sliderRef.current.swiper.slideNext()
-        }
-    }
-
-
     return (
         <>
-            <div className='px-2 max-w-7xl mx-auto mt-12 mb-5 flex justify-between items-center'>
-                <HeadingComponent
-                    content="TOP SELLINGS"
-                    className="font-bold text-lg xxs:text-xl md:text-2xl"
-                />
-                <div className='flex gap-2'>
-                    <ButtonComponent
-                        size="sm"
-                        isIconOnly
-                        className="bg-slate text-rosedark rounded-none text-2xl"
-                        startContent={<Icons name="back" />}
-                        onClick={handlePrev}
-                    />
-                    <ButtonComponent
-                        size="sm"
-                        isIconOnly
-                        className="bg-slate text-rosedark rounded-none text-2xl"
-                        startContent={<Icons name="next" />}
-                        onClick={handleNext}
-                    />
-                </div>
-            </div>
+            <CardHeaderComponent
+                sliderRef={sliderRef}
+                setSlidesPerView={setSlidesPerView}
+                content="TOP PRODUCTS"
+            />
 
             <div className='px-2 max-w-7xl mx-auto'>
                 <Swiper

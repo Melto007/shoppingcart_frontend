@@ -3,9 +3,9 @@ import Paragraph from "../../components/Paragraph"
 
 function Footerpage() {
     return (
-        <>
+        <div className="bg-slate text-zinc">
             <div
-                className="flex justify-between items-center bg-slate text-zinc px-2 py-2 max-w-8xl">
+                className="flex justify-between items-center px-2 py-2 max-w-8xl m-auto">
                 <Paragraph
                     content="This site is owned by melto.sm"
                     className="text-[0.6rem] xxs:text-[0.8rem] md:text-[0.9rem]"
@@ -34,7 +34,7 @@ function Footerpage() {
                     </a>
                 </div>
             </div>
-        </>
+        </div>
     )
 }
 

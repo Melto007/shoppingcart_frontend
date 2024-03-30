@@ -9,8 +9,8 @@ import ButtonComponent from "../../components/ButtonComponent"
 function TopDiscount() {
     return (
         <>
-            <div className="h-auto w-full bg-gradient-to-r from-graydark to-graylight">
-                <div className="flex justify-center items-center mx-auto my-auto">
+            <div className="h-auto bg-gradient-to-r from-graydark to-graylight">
+                <div className="flex justify-center items-center max-w-7xl m-auto">
                     <div className="w-full">
                         <ImageComponent
                             src={product01}

@@ -9,9 +9,12 @@ export default {
   ],
   theme: {
     extend: {
+      spacing: {
+        '8xl': '1600px'
+      },
       screens: {
         'xxs': '340px',
-        'xmd': '560px',
+        'xmd': '560px'
       },
       colors: {
         'pinklight': "#f9a8d4",

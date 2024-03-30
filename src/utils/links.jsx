@@ -6,31 +6,21 @@ export const links = [
     },
     {
         id: 2,
-        name: 'Men',
-        path: '/men'
-    },
-    {
-        id: 3,
-        name: 'Women',
-        path: '/women'
-    },
-    {
-        id: 4,
         name: 'Laptop',
         path: '/laptop'
     },
     {
-        id: 5,
+        id: 3,
         name: 'Smartphones',
         path: '/smartphone'
     },
     {
-        id: 6,
+        id: 4,
         name: 'Camera',
         path: '/camera'
     },
     {
-        id: 7,
+        id: 5,
         name: 'Accessories',
         path: '/accessories'
     }

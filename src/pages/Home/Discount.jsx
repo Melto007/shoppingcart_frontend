@@ -22,7 +22,7 @@ function Discount() {
 
             <div className='px-2 gap-7 grid grid-cols-1 xxs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 max-w-7xl mx-auto'>
                 {discountContainer.map((item, idx) => (
-                    <Card shadow="md" isPressable className='mb-4' key={idx}>
+                    <Card shadow="md" isPressable key={idx}>
                         <CardHeader>
                             <ImageComponent
                                 src={item.image}
@@ -64,6 +64,7 @@ function Discount() {
                         </CardFooter>
                     </Card>
                 ))}
+                <div className='mb-4'></div>
             </div>
         </>
     )

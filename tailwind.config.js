@@ -24,6 +24,8 @@ export default {
         "bluelight": "#93c5fd",
         "slate": "#0f172a",
         "zinc": "#fafafa",
+        "graylight": "#6b7280",
+        "graydark": "#4b5563"
       }
     },
   },

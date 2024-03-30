@@ -39,7 +39,7 @@ function Newproducts() {
                 <Swiper
                     ref={sliderRef}
                     autoplay={{
-                        delay: 2500,
+                        delay: 3500,
                         disableOnInteraction: false,
                     }}
                     modules={[Autoplay, FreeMode, Virtual, Navigation, Pagination]}

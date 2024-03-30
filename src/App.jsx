@@ -3,8 +3,11 @@ import { Provider } from 'react-redux'
 import { NextUIProvider } from '@nextui-org/react'
 import store from './store/store'
 import Home from './pages/Home/Home'
-// import Laptop from './pages/Laptop/Laptop'
+import Laptop from './pages/Laptop/Laptop'
 import RootPage from './pages/RootPage'
+import Smartphones from './pages/Smartphone/Smartphones'
+import Cameras from './pages/Camera/Cameras'
+import Accessories from './pages/Accessories/Accessories'
 
 function App() {
   const router = createBrowserRouter([
@@ -16,10 +19,22 @@ function App() {
           path: '/',
           element: <Home />
         },
-        // {
-        //   path: 'laptop',
-        //   element: <Laptop />
-        // }
+        {
+          path: 'laptop',
+          element: <Laptop />
+        },
+        {
+          path: 'smartphone',
+          element: <Smartphones />
+        },
+        {
+          path: 'camera',
+          element: <Cameras />
+        },
+        {
+          path: 'accessories',
+          element: <Accessories />
+        }
       ]
     },
   ])

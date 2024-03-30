@@ -12,13 +12,13 @@ import HeadingComponent from '../../components/HeadingComponent'
 import Icons from '../../components/Icons'
 import ButtonComponent from '../../components/ButtonComponent'
 
-function Laptop() {
+function Smartphones() {
     return (
         <>
             <div className='px-2 max-w-7xl mx-auto mt-12 mb-5 flex justify-between items-center font-bold'>
                 <Breadcrumbs>
                     <BreadcrumbItem>Home</BreadcrumbItem>
-                    <BreadcrumbItem>Laptop</BreadcrumbItem>
+                    <BreadcrumbItem>Smartphones</BreadcrumbItem>
                 </Breadcrumbs>
             </div>
 
@@ -72,4 +72,4 @@ function Laptop() {
     )
 }
 
-export default Laptop
+export default Smartphones

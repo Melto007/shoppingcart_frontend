@@ -23,7 +23,6 @@
   margin: 0;
 }
 
-/* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
   width: 15px;
 }
@@ -36,5 +35,5 @@
 *::-webkit-scrollbar-thumb {
   background-color: #f43f5e;
   border-radius: 14px;
-  border: 3px solid #0f172a;
+  border: 3px solid #f43f5e;
 }

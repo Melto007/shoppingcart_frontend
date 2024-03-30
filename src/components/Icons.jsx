@@ -1,4 +1,4 @@
-import { FaSearch, FaUser } from "react-icons/fa"
+import { FaSearch, FaUser, FaTwitter, FaLinkedin, FaGithub } from "react-icons/fa"
 import { MdCancel } from "react-icons/md"
 import { FaBagShopping } from "react-icons/fa6"
 import { CiStar } from "react-icons/ci"
@@ -41,6 +41,21 @@ function Icons(props) {
             id: 8,
             name: 'back',
             icon: <MdNavigateBefore />
+        },
+        {
+            id: 9,
+            name: "twitter",
+            icon: <FaTwitter className="text-[0.6rem] xxs:text-[0.8rem] md:text-lg text-blue-600" />
+        },
+        {
+            id: 10,
+            name: "linkedin",
+            icon: <FaLinkedin className="text-[0.6rem] xxs:text-[0.8rem] md:text-lg text-blue-800" />
+        },
+        {
+            id: 11,
+            name: "github",
+            icon: <FaGithub className="text-[0.6rem] xxs:text-[0.8rem] md:text-lg text-slate" />
         }
     ]
     return (

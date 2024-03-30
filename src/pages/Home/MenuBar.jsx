@@ -28,6 +28,7 @@ import Header from './Header'
 import Topproducts from './Topproducts'
 import TopDiscount from './TopDiscount'
 import Newproducts from './Newproducts'
+import Footerpage from './Footerpage'
 
 function MenuBar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -125,6 +126,10 @@ function MenuBar() {
                     <Discount />
                     <TopDiscount />
                     <Topproducts />
+            </Container>
+
+            <Container>
+                <Footerpage />
             </Container>
         </>
     )

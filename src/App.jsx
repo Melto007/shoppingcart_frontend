@@ -2,14 +2,26 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { NextUIProvider } from '@nextui-org/react'
 import store from './store/store'
-import Home from './pages/Home/MenuBar'
+import Home from './pages/Home/Home'
+// import Laptop from './pages/Laptop/Laptop'
+import RootPage from './pages/RootPage'
 
 function App() {
   const router = createBrowserRouter([
     {
       path: '',
-      element: <Home />
-    }
+      element: <RootPage />,
+      children: [
+        {
+          path: '/',
+          element: <Home />
+        },
+        // {
+        //   path: 'laptop',
+        //   element: <Laptop />
+        // }
+      ]
+    },
   ])
   return (
     <>

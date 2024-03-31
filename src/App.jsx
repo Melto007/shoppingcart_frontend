@@ -8,6 +8,7 @@ import RootPage from './pages/RootPage'
 import Smartphones from './pages/Smartphone/Smartphones'
 import Cameras from './pages/Camera/Cameras'
 import Accessories from './pages/Accessories/Accessories'
+import Account from './pages/User/Account'
 
 function App() {
   const router = createBrowserRouter([
@@ -34,6 +35,10 @@ function App() {
         {
           path: 'accessories',
           element: <Accessories />
+        },
+        {
+          path: 'account',
+          element: <Account />
         }
       ]
     },

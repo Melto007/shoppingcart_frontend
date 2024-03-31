@@ -83,10 +83,12 @@ function MenuBar() {
                             </Badge>
                         </NavbarItem>
                         <NavbarItem className='relative'>
-                            <AvatarComponent
-                                as="button"
-                                className="transition-transform"
-                            />
+                            <NavLink to="account">
+                                <AvatarComponent
+                                    as="button"
+                                    className="transition-transform"
+                                />
+                            </NavLink>
                         </NavbarItem>
                     </NavbarContent>
 

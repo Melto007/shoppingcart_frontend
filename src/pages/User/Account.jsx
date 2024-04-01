@@ -5,6 +5,7 @@ import {
     Card,
     CardBody
 } from "@nextui-org/react"
+import InputComponent from "../../components/InputComponent"
 
 function Account() {
     return (
@@ -20,7 +21,7 @@ function Account() {
                             className="rounded-none"
                         >
                             <CardBody>
-
+                                <InputComponent />
                             </CardBody>
                         </Card>
                     </Tab>

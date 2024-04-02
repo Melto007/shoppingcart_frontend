@@ -1,4 +1,6 @@
-
+import {
+    useState
+} from 'react'
 import {
     Tabs,
     Tab,
@@ -10,8 +12,15 @@ import {
 } from "@nextui-org/react"
 import InputComponent from "../../components/InputComponent"
 import ButtonComponent from "../../components/ButtonComponent"
+import RadioComponent from '../../components/RadioComponent'
 
 function Account() {
+    const [ editForm, setEditForm ] = useState(false)
+
+    function onHandleEdit() {
+        setEditForm(!editForm)
+    }
+
     return (
         <>
             <div className="max-w-lg m-auto">
@@ -29,26 +38,30 @@ function Account() {
                                     <InputComponent
                                         size="md"
                                         label="firstname"
+                                        isEdit={editForm}
+                                        defaultValue={!editForm && "shehin"}
                                     />
                                 </div>
                                 <div className="mb-4 md:mb-5">
                                     <InputComponent
                                         size="md"
                                         label="lastname"
+                                        isEdit={editForm}
+                                        defaultValue={!editForm && "melto"}
                                     />
                                 </div>
                                 <div className="mb-4 md:mb-5">
-                                    <RadioGroup
-                                        label="Your Gender"
-                                    >
-                                        <Radio value="male">Male</Radio>
-                                        <Radio value="female">Female</Radio>
-                                    </RadioGroup>
+                                    <RadioComponent
+                                        content={['male', 'female']}
+                                        isEdit={editForm}
+                                    />
                                 </div>
                                 <div className="mb-4 md:mb-5">
                                     <InputComponent
                                         size="md"
                                         label="email"
+                                        isEdit={editForm}
+                                        defaultValue={!editForm && "meltosm8@gmail.com"}
                                     />
                                 </div>
                                 <div className="mb-4 md:mb-5">
@@ -56,6 +69,8 @@ function Account() {
                                         size="md"
                                         label="mobile number"
                                         type="number"
+                                        isEdit={editForm}
+                                        defaultValue={!editForm && "7418108810"}
                                     />
                                 </div>
                             </CardBody>
@@ -68,11 +83,12 @@ function Account() {
                                     color="danger"
                                 />
                                 <ButtonComponent
-                                    content="edit"
+                                    content={`${editForm ? 'cancel' : 'edit'}`}
                                     size="md"
                                     radius="full"
                                     className="w-full font-bold"
-                                    color="primary"
+                                    color={`${editForm ? 'danger' : 'primary'}`}
+                                    onClick={onHandleEdit}
                                 />
                             </CardFooter>
                         </Card>

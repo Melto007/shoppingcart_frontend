@@ -8,6 +8,7 @@ function InputComponent(props) {
             <Input
                 variant="bordered"
                 size={props.size}
+                label={props.label}
                 {...props}
             />
         </>

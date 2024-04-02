@@ -30,75 +30,110 @@ function Account() {
                     className="font-bold"
                 >
                     <Tab key="account" title="Account">
-                        <Card
-                            className="rounded-lg"
-                        >
-                            <CardBody>
-                                <div className="mb-4 md:mb-5">
-                                    <InputComponent
+                        <div className='h-[80vh]'>
+                            <Card
+                                className="rounded-lg"
+                            >
+                                <CardBody>
+                                    <div className="mb-4">
+                                        <InputComponent
+                                            size="md"
+                                            label="firstname"
+                                            isEdit={editForm}
+                                            defaultValue={!editForm && "shehin"}
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <InputComponent
+                                            size="md"
+                                            label="lastname"
+                                            isEdit={editForm}
+                                            defaultValue={!editForm && "melto"}
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <RadioComponent
+                                            content={['male', 'female']}
+                                            isEdit={editForm}
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <InputComponent
+                                            size="md"
+                                            label="email"
+                                            isEdit={editForm}
+                                            defaultValue={!editForm && "meltosm8@gmail.com"}
+                                        />
+                                    </div>
+                                    <div className="mb-4">
+                                        <InputComponent
+                                            size="md"
+                                            label="mobile number"
+                                            type="number"
+                                            isEdit={editForm}
+                                            defaultValue={!editForm && "7418108810"}
+                                        />
+                                    </div>
+                                </CardBody>
+                                <CardFooter className="flex flex-col gap-2">
+                                    <ButtonComponent
+                                        content="save"
                                         size="md"
-                                        label="firstname"
-                                        isEdit={editForm}
-                                        defaultValue={!editForm && "shehin"}
+                                        radius="full"
+                                        className="w-full font-bold"
+                                        color="danger"
                                     />
-                                </div>
-                                <div className="mb-4 md:mb-5">
-                                    <InputComponent
+                                    <ButtonComponent
+                                        content={`${editForm ? 'cancel' : 'edit'}`}
                                         size="md"
-                                        label="lastname"
-                                        isEdit={editForm}
-                                        defaultValue={!editForm && "melto"}
+                                        radius="full"
+                                        className="w-full font-bold"
+                                        color={`${editForm ? 'danger' : 'primary'}`}
+                                        onClick={onHandleEdit}
                                     />
-                                </div>
-                                <div className="mb-4 md:mb-5">
-                                    <RadioComponent
-                                        content={['male', 'female']}
-                                        isEdit={editForm}
-                                    />
-                                </div>
-                                <div className="mb-4 md:mb-5">
-                                    <InputComponent
-                                        size="md"
-                                        label="email"
-                                        isEdit={editForm}
-                                        defaultValue={!editForm && "meltosm8@gmail.com"}
-                                    />
-                                </div>
-                                <div className="mb-4 md:mb-5">
-                                    <InputComponent
-                                        size="md"
-                                        label="mobile number"
-                                        type="number"
-                                        isEdit={editForm}
-                                        defaultValue={!editForm && "7418108810"}
-                                    />
-                                </div>
-                            </CardBody>
-                            <CardFooter className="flex flex-col gap-2">
-                                <ButtonComponent
-                                    content="save"
-                                    size="md"
-                                    radius="full"
-                                    className="w-full font-bold"
-                                    color="danger"
-                                />
-                                <ButtonComponent
-                                    content={`${editForm ? 'cancel' : 'edit'}`}
-                                    size="md"
-                                    radius="full"
-                                    className="w-full font-bold"
-                                    color={`${editForm ? 'danger' : 'primary'}`}
-                                    onClick={onHandleEdit}
-                                />
-                            </CardFooter>
-                        </Card>
+                                </CardFooter>
+                            </Card>
+                        </div>
                     </Tab>
                     <Tab key="order" title="Order">
                         <Card
-                            className="rounded-none"
+                            className="rounded-lg"
                         >
-                            <CardBody>
-
+                            <CardBody className='flex flex-col gap-2'>
+                                <div className='flex justify-between items-center'>
+                                    <div>
+                                        <span>No.</span>
+                                    </div>
+                                    <div>
+                                        <span>Product</span>
+                                    </div>
+                                    <div>
+                                        <span>Quantity</span>
+                                    </div>
+                                    <div>
+                                        <span>Status</span>
+                                    </div>
+                                    <div>
+                                        <span>Total</span>
+                                    </div>
+                                </div>
+                                <div className='flex justify-between items-center'>
+                                    <div>
+                                        <span>1</span>
+                                    </div>
+                                    <div>
+                                        <span>Product 1</span>
+                                    </div>
+                                    <div>
+                                        <span>2</span>
+                                    </div>
+                                    <div>
+                                        <span>Delivered</span>
+                                    </div>
+                                    <div>
+                                        <span>400000</span>
+                                    </div>
+                                </div>
                             </CardBody>
                         </Card>
                     </Tab>

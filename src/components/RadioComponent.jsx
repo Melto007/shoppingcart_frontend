@@ -12,6 +12,7 @@ function RadioComponent(props) {
     if(!props.isEdit) {
         disable = true
     }
+
     return (
         <>
             <RadioGroup

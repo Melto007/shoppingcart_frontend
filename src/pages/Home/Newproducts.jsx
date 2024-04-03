@@ -22,10 +22,19 @@ import ButtonComponent from '../../components/ButtonComponent'
 
 import { cardContainer } from './ProductContainer'
 import CardHeaderComponent from '../../components/CardHeaderComponent'
+import {
+    useNavigate
+} from 'react-router-dom'
 
 function Newproducts() {
     const sliderRef = useRef()
+    const navigate = useNavigate()
+
     const [slidesPerView, setSlidesPerView] = useState(1)
+
+    function onHandleShop(element) {
+        navigate(`${element}`)
+    }
 
     return (
         <>
@@ -80,6 +89,7 @@ function Newproducts() {
                                             size="sm"
                                             color="danger"
                                             className="text-[0.7rem] bg-slate rounded-none font-bold"
+                                            onClick={() => onHandleShop(item.name)}
                                         />
                                         <ButtonComponent
                                             content="Add cart"

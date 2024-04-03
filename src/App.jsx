@@ -9,6 +9,7 @@ import Smartphones from './pages/Smartphone/Smartphones'
 import Cameras from './pages/Camera/Cameras'
 import Accessories from './pages/Accessories/Accessories'
 import Account from './pages/User/Account'
+import DetailProduct from './pages/Product/DetailProduct'
 
 function App() {
   const router = createBrowserRouter([
@@ -16,6 +17,10 @@ function App() {
       path: '',
       element: <RootPage />,
       children: [
+        {
+          path: ':pk',
+          element: <DetailProduct />
+        },
         {
           path: '/',
           element: <Home />

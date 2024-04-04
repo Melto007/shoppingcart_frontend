@@ -13,7 +13,8 @@ import {
     Card,
     CardBody,
     CardHeader,
-    CardFooter
+    CardFooter,
+    User
 } from '@nextui-org/react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 
@@ -192,6 +193,96 @@ function DetailProduct() {
                             </SwiperSlide>
                         ))}
                     </Swiper>
+                </div>
+
+                <div className='max-w-4xl mx-auto my-3'>
+                    <Card>
+                        <CardHeader>
+                            <User
+                                name="shehin melto"
+                                className='font-bold'
+                                description={(
+                                    <span>
+                                        @shehinmelto
+                                    </span>
+                                )}
+                                avatarProps={{
+                                    src: "https://avatars.githubusercontent.com/u/30373425?v=4"
+                                }}
+                            />
+                        </CardHeader>
+                        <CardBody>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eligendi reprehenderit labore ea eos, mollitia accusamus deserunt quod sapiente facilis, molestiae ab officia voluptatem doloremque nisi inventore ipsam iure nostrum.
+                        </CardBody>
+                        <CardFooter>
+                            <div className="flex items-center md:text-xl">
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                            </div>
+                        </CardFooter>
+                        <CardHeader>
+                            <User
+                                name="shehin melto"
+                                className='font-bold'
+                                description={(
+                                    <span>
+                                        @shehinmelto
+                                    </span>
+                                )}
+                                avatarProps={{
+                                    src: "https://avatars.githubusercontent.com/u/30373425?v=4"
+                                }}
+                            />
+                        </CardHeader>
+                        <CardBody>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eligendi reprehenderit labore ea eos, mollitia accusamus deserunt quod sapiente facilis, molestiae ab officia voluptatem doloremque nisi inventore ipsam iure nostrum.
+                        </CardBody>
+                        <CardFooter>
+                            <div className="flex items-center md:text-xl">
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                            </div>
+                        </CardFooter>
+                        <CardHeader>
+                            <User
+                                name="shehin melto"
+                                className='font-bold'
+                                description={(
+                                    <span>
+                                        @shehinmelto
+                                    </span>
+                                )}
+                                avatarProps={{
+                                    src: "https://avatars.githubusercontent.com/u/30373425?v=4"
+                                }}
+                            />
+                        </CardHeader>
+                        <CardBody>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni, eligendi reprehenderit labore ea eos, mollitia accusamus deserunt quod sapiente facilis, molestiae ab officia voluptatem doloremque nisi inventore ipsam iure nostrum.
+                        </CardBody>
+                        <CardFooter>
+                            <div className="flex items-center md:text-xl">
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                                <Icons name="star" />
+                            </div>
+                        </CardFooter>
+                        <div>
+                            <ButtonComponent
+                                content="Add Your Review"
+                                radius="none"
+                                className="bg-rosedark text-zinc w-full font-bold"
+                            />
+                        </div>
+                    </Card>
                 </div>
             </Container>
         </>

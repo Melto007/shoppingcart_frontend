@@ -1,6 +1,6 @@
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import { NextUIProvider } from '@nextui-org/react'
+import { NextUIProvider, User } from '@nextui-org/react'
 import store from './store/store'
 import Home from './pages/Home/Home'
 import Laptop from './pages/Laptop/Laptop'
@@ -10,6 +10,7 @@ import Cameras from './pages/Camera/Cameras'
 import Accessories from './pages/Accessories/Accessories'
 import Account from './pages/User/Account'
 import DetailProduct from './pages/Product/DetailProduct'
+import UserAuth from './pages/User/UserAuth'
 
 function App() {
   const router = createBrowserRouter([
@@ -17,6 +18,10 @@ function App() {
       path: '',
       element: <RootPage />,
       children: [
+        {
+          path: 'login',
+          element: <UserAuth />
+        },
         {
           path: ':pk',
           element: <DetailProduct />
@@ -46,7 +51,7 @@ function App() {
           element: <Account />
         }
       ]
-    },
+    }
   ])
   return (
     <>

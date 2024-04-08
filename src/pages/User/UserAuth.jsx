@@ -10,14 +10,22 @@ import {
 } from '@nextui-org/react'
 import ButtonComponent from '../../components/ButtonComponent'
 import { useForm } from 'react-hook-form'
+import { useSelector, useDispatch } from 'react-redux'
+import { loginUser } from '../../features/userSlice'
 
 function UserAuth() {
     const [ selected, setSelecter ] = useState("login")
     const { register, handleSubmit, formState: { errors } } = useForm()
 
+    const dispatch = useDispatch()
+    const userSlice = useSelector(state => state.userSlice)
+    const { issuccess, isloading, iserror, user } = userSlice
+
     function onHandleSubmit(data) {
-        console.log(data)
+        dispatch(loginUser(data))
     }
+
+    console.log(issuccess, isloading, iserror, user)
 
     return (
         <>
@@ -59,11 +67,22 @@ function UserAuth() {
                                     )}
                                     <div>
                                         <Input
+                                            type='password'
                                             size="md"
                                             label="Password"
                                             isEdit={true}
+                                            {
+                                                ...register('password', {
+                                                    required: "Password is required"
+                                                })
+                                            }
                                         />
                                     </div>
+                                    {errors.password?.message && (
+                                        <div className='mx-2 text-red-500'>
+                                            <span className='text-sm'>{errors.password?.message}</span>
+                                        </div>
+                                    )}
                                     <div>
                                         <ButtonComponent
                                             fullWidth="true"

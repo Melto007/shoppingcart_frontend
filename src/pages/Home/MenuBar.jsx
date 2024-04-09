@@ -83,7 +83,7 @@ function MenuBar() {
                             </Badge>
                         </NavbarItem>
                         <NavbarItem className='relative'>
-                            <NavLink to="account">
+                            <NavLink to={`${'account'}`}>
                                 <AvatarComponent
                                     as="button"
                                     className="transition-transform"

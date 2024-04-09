@@ -11,8 +11,16 @@ import ImageComponent from '../../components/ImageComponent'
 import HeadingComponent from '../../components/HeadingComponent'
 import Icons from '../../components/Icons'
 import ButtonComponent from '../../components/ButtonComponent'
+import {
+    useNavigate
+} from 'react-router-dom'
 
 function Laptop() {
+    const navigate = useNavigate()
+    function onHandleShop(element) {
+        navigate(`/${element}`)
+    }
+
     return (
         <>
             <div className='px-2 max-w-7xl mx-auto mt-12 mb-5 flex justify-between items-center font-bold'>
@@ -54,6 +62,7 @@ function Laptop() {
                                     size="sm"
                                     color="danger"
                                     className="text-[0.7rem] bg-slate rounded-none font-bold"
+                                    onClick={() => onHandleShop(item.name)}
                                 />
                                 <ButtonComponent
                                     content="Add cart"

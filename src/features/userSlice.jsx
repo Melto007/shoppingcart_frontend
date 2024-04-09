@@ -33,6 +33,24 @@ export const loginUser = createAsyncThunk(
     }
 )
 
+export const refreshToken = createAsyncThunk(
+    "refreshToken",
+    async(data, { rejectWithValue }) => {
+        try {
+            if(data.status === 200) {
+                return data
+            }
+
+            if(data.status === 404) {
+                return rejectWithValue(data)
+            }
+        } catch(error) {
+            const data = ['Oops something went wrong...']
+            return rejectWithValue(data)
+        }
+    }
+)
+
 const userSlice = createSlice({
     name: "userSlice",
     initialState,

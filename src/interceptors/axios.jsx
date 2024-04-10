@@ -29,10 +29,8 @@ instance.interceptors.response.use(response => response, async error => {
             { withCredentials: true }
         )
 
-        console.log("response", response)
-
         if(response.status === 200) {
-            instance.defaults.headers.common['Authorization'] = `Bearer ${response.data.access_token}`
+            instance.defaults.headers.common['Authorization'] = `Bearer ${response.data.data.access_token}`
 
             return instance(error.config)
         }

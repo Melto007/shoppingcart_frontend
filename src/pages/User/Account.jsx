@@ -1,4 +1,5 @@
 import {
+    useEffect,
     useState
 } from 'react'
 import {
@@ -13,9 +14,18 @@ import {
 import InputComponent from "../../components/InputComponent"
 import ButtonComponent from "../../components/ButtonComponent"
 import RadioComponent from '../../components/RadioComponent'
+import { useDispatch, useSelector } from 'react-redux'
+import { getProfile } from '../../features/profileSlice'
 
 function Account() {
     const [ editForm, setEditForm ] = useState(false)
+    const dispatch = useDispatch()
+    const profileSlice = useSelector(state => state.profileSlice)
+    const { profile } = profileSlice
+
+    useEffect(() => {
+        dispatch(getProfile())
+    }, [])
 
     function onHandleEdit() {
         setEditForm(!editForm)

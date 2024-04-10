@@ -13,7 +13,7 @@ export const getProfile = createAsyncThunk(
     async(args, {rejectWithValue}) => {
         try {
             const { data } = await axios.get(
-                `profile/${1}/`
+                `profile/`
             )
 
             if(data.status === 200) {

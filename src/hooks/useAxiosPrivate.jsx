@@ -1,4 +1,4 @@
-import { instance } from '../interceptors/axios'
+import { axiosPrivate } from '../interceptors/axios'
 import { useEffect } from 'react'
 import useRefreshToken from './useRefreshToken'
 import { useSelector } from 'react-redux'
@@ -8,9 +8,11 @@ const useAxiosPrivate = () => {
     const userSlice = useSelector(state => state.userSlice)
     const { user } = userSlice
 
+    console.log(user)
+
     useEffect(() => {
 
-        const requestIntercept = instance.interceptors.request.use(
+        const requestIntercept = axiosPrivate.interceptors.request.use(
             config => {
                 if (!config.headers['Authorization']) {
                     config.headers['Authorization'] = `Bearer ${user?.accessToken}`;
@@ -19,7 +21,7 @@ const useAxiosPrivate = () => {
             }, (error) => Promise.reject(error)
         );
 
-        const responseIntercept = instance.interceptors.response.use(
+        const responseIntercept = axiosPrivate.interceptors.response.use(
             response => response,
             async (error) => {
                 const prevRequest = error?.config;
@@ -27,19 +29,19 @@ const useAxiosPrivate = () => {
                     prevRequest.sent = true;
                     const newAccessToken = await refresh();
                     prevRequest.headers['Authorization'] = `Bearer ${newAccessToken}`;
-                    return instance(prevRequest);
+                    return axiosPrivate(prevRequest);
                 }
                 return Promise.reject(error);
             }
         );
 
         return () => {
-            instance.interceptors.request.eject(requestIntercept);
-            instance.interceptors.response.eject(responseIntercept);
+            axiosPrivate.interceptors.request.eject(requestIntercept);
+            axiosPrivate.interceptors.response.eject(responseIntercept);
         }
     }, [user, refresh])
 
-    return instance;
+    return axiosPrivate;
 }
 
 export default useAxiosPrivate;

@@ -102,7 +102,7 @@ function DetailProduct() {
                                                 className="font-bold mb-2"
                                             />
                                         </div>
-                                        <div>
+                                        <div className="md:text-lg">
                                             <Paragraph
                                                 className="mb-2"
                                                 content="Samsung"

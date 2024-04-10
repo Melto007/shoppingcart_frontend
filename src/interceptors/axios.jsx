@@ -5,16 +5,15 @@
 //     baseURL: BASE_URL
 // })
 
-// export const instance = axios.create({
+// export const axiosPrivate = axios.create({
 //     baseURL: BASE_URL,
 //     headers: { 'Content-Type': 'application/json' },
 //     withCredentials: true
 // })
-import axios from 'axios'
+import axios from 'axios';
 
 const instance = axios.create({
     baseURL: 'http://127.0.0.1:8000/api/',
-    headers: { 'Content-Type': 'application/json' },
     withCredentials: true
 });
 
@@ -30,8 +29,10 @@ instance.interceptors.response.use(response => response, async error => {
             { withCredentials: true }
         )
 
+        console.log("response", response)
+
         if(response.status === 200) {
-            instance.defaults.headers.common['Authorization'] = `Bearer ${response.data.token}`
+            instance.defaults.headers.common['Authorization'] = `Bearer ${response.data.access_token}`
 
             return instance(error.config)
         }

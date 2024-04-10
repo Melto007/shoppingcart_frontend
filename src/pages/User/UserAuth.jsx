@@ -12,6 +12,7 @@ import ButtonComponent from '../../components/ButtonComponent'
 import { useForm } from 'react-hook-form'
 import { useSelector, useDispatch } from 'react-redux'
 import { loginUser } from '../../features/userSlice'
+import { Navigate } from 'react-router-dom'
 
 function UserAuth() {
     const [ selected, setSelecter ] = useState("login")
@@ -19,13 +20,17 @@ function UserAuth() {
 
     const dispatch = useDispatch()
     const userSlice = useSelector(state => state.userSlice)
-    const { issuccess, isloading, iserror, user } = userSlice
+    const { issuccess, isloading, iserror, user, isAuthenticated } = userSlice
 
     function onHandleSubmit(data) {
         dispatch(loginUser(data))
     }
 
-    console.log(issuccess, isloading, iserror, user)
+    if(isAuthenticated) {
+        return <Navigate to='/' />
+    }
+
+    console.log(issuccess, isloading, iserror, user, isAuthenticated)
 
     return (
         <>

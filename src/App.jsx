@@ -1,4 +1,4 @@
-import { createBrowserRouter, RouterProvider, Routes, Route, BrowserRouter } from 'react-router-dom'
+import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import { Provider } from 'react-redux'
 import { NextUIProvider, User } from '@nextui-org/react'
 import store from './store/store'
@@ -11,58 +11,55 @@ import Accessories from './pages/Accessories/Accessories'
 import Account from './pages/User/Account'
 import DetailProduct from './pages/Product/DetailProduct'
 import UserAuth from './pages/User/UserAuth'
-import MenuBar from './pages/Home/MenuBar'
-import Footerpage from './pages/Home/Footerpage'
 import ProtectedRoute from './pages/ProtectedRoute'
 
 function App() {
-  // const router = createBrowserRouter([
-  //   {
-  //     path: '',
-  //     element: <RootPage />,
-  //     children: [
-  //       {
-  //         path: 'login',
-  //         element: <UserAuth />
-  //       },
-  //       {
-  //         path: ':pk',
-  //         element: <DetailProduct />
-  //       },
-  //       {
-  //         path: '/',
-  //         element: <Home />
-  //       },
-  //       {
-  //         path: 'laptop',
-  //         element: <Laptop />
-  //       },
-  //       {
-  //         path: 'smartphone',
-  //         element: <Smartphones />
-  //       },
-  //       {
-  //         path: 'camera',
-  //         element: <Cameras />
-  //       },
-  //       {
-  //         path: 'accessories',
-  //         element: <Accessories />
-  //       },
-  //       {
-  //         path: 'account',
-  //         element: <Account />
-  //       }
-  //     ]
-  //   }
-  // ])
+  const router = createBrowserRouter([
+    {
+      path: '',
+      element: <RootPage />,
+      children: [
+        {
+          path: 'login',
+          element: <UserAuth />
+        },
+        {
+          path: ':pk',
+          element: <DetailProduct />
+        },
+        {
+          path: '/',
+          element: <Home />
+        },
+        {
+          path: 'laptop',
+          element: <Laptop />
+        },
+        {
+          path: 'smartphone',
+          element: <Smartphones />
+        },
+        {
+          path: 'camera',
+          element: <Cameras />
+        },
+        {
+          path: 'accessories',
+          element: <Accessories />
+        },
+        {
+          path: 'account',
+          element: <ProtectedRoute><Account /></ProtectedRoute>
+        }
+      ]
+    }
+  ])
   return (
     <>
       <Provider store={store}>
         <NextUIProvider>
-          {/* <RouterProvider router={router} /> */}
-          <BrowserRouter>
-            <MenuBar />
+          <RouterProvider router={router} />
+            {/* <MenuBar />
             <Routes>
               <Route path='/' element={<Home />}></Route>
               <Route path='login' element={<UserAuth />}></Route>
@@ -80,9 +77,7 @@ function App() {
               <Route path='camera' element={<Cameras />}></Route>
               <Route path='accessories' element={<Accessories />}></Route>
               <Route path=':pk' element={<DetailProduct />}></Route>
-            </Routes>
-          </BrowserRouter>
-          <Footerpage />
+            </Routes> */}
         </NextUIProvider>
       </Provider>
     </>
